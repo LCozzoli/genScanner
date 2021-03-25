@@ -4,10 +4,12 @@ A scanner for playRust plants seeds genetics
 ## Requirements
 
 - This script is working only with native, 1920 x 1080 resolution.
-- You need Python3 and pyautogui library.
-- Once you installed Python39+, use `pip3 install pyautogui`.
+- You need Python3 and pyautogui, opencv library.
+- Once you installed Python39+, use `pip3 install pyautogui opencv-python`.
 
 ## Running the script
 
 Clone the repository, start a shell inside the folder, run `python .`
+The seed list will be created as a text file called `list.txt`
 
+Now feel free to use sites like https://pr0xs.github.io/Rust-Genetics-Lab/
