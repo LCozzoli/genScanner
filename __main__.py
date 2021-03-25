@@ -28,7 +28,7 @@ class GeneScanner:
     def searchFor(self, gene):
         matches = []
         lastMatch = -1
-        for coords in pyautogui.locateAll(resource_path("./genes/%s.png" % (gene)), self.current, confidence=.7):
+        for coords in pyautogui.locateAll(resource_path("./genes/%s.png" % (gene)), self.current, confidence=.75):
             if lastMatch > 0 and coords.left - lastMatch < 30: 
                 continue
             matches.append((gene, coords.left))
