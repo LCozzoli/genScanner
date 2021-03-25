@@ -36,8 +36,8 @@ class GeneScanner:
     
     def add(self, genetic):
         if genetic not in self.list:
-            print('New seed :', genetic)
             self.list.append(genetic)
+            print('New seed #%d:' % (len(self.list)), genetic)
             with open('list.txt', 'w') as fp:
                 fp.write('\n'.join('%s' % x for x in self.list))
 
