@@ -9,7 +9,6 @@ A scanner for playRust plants seeds genetics
 
 ## Running the script
 
-Clone the repository, start a shell inside the folder, run `python .`
-The seed list will be created as a text file called `list.txt`
-
-Now feel free to use sites like https://pr0xs.github.io/Rust-Genetics-Lab/
+- Clone the repository, start a shell inside the folder, run `python .`
+- The genetics list will be created as `list.txt`
+- Navigate to https://pr0xs.github.io/Rust-Genetics-Lab/ and use your seed list to find the perfect gen :D
