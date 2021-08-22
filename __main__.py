@@ -27,12 +27,10 @@ class GeneScanner:
     
     def searchFor(self, gene):
         matches = []
-        lastMatch = -1
-        for coords in pyautogui.locateAll(resource_path("./genes/%s.png" % (gene)), self.current, confidence=.75):
-            if lastMatch > 0 and coords.left - lastMatch < 30: 
+        for coords in pyautogui.locateAll(resource_path("./genes/%s.png" % (gene)), self.current, confidence=.75, grayscale=True):
+            if any(((coords.left-10) <= match[1] <= (coords.left + 10) ) for match in matches):
                 continue
             matches.append((gene, coords.left))
-            lastMatch = coords.left
         return matches
 
     def scanAll(self):
@@ -53,5 +51,5 @@ class GeneScanner:
                 fp.write('\n'.join('%s' % x for x in self.list))
 
 instance = GeneScanner()
-print('Running genScanner by SegFault..\n\nPlease ensure that you\'ve set your resolution to 1920x1080\nResult file will output to list.txt\n\n')
+print('Running genScanner by SegFault..\n\nPlease ensure that you\'ve set your resolution to 1920x1080\nAlso check that graphics.uiscale is set to 1\nResult file will output to list.txt\n\nThanks to trausi for the detection fix ♥')
 instance.run()
