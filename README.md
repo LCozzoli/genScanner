@@ -16,7 +16,7 @@ A scanner for playRust plants seeds genetics
 - This script is working only with native, 1920 x 1080 resolution.
 - Set graphics.uiscale to 1.
 - You need Python3 winsound, pyautogui and opencv library.
-- Once you installed Python39+, use `pip3 install pyautogui opencv-python winsound`.
+- Once you installed Python39+, use `pip3 install pyautogui opencv-python winsound Pillow`.
 
 ## Running the sources (informed users)
 
